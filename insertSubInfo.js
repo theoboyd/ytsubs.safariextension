@@ -37,10 +37,10 @@ function setSubCount(userId, targetDiv) {
 
         var subCount = channelData.items[0].statistics.subscriberCount;
 
-        var newElement = document.createElement("span");
-        newElement.textContent = subCount + " subs ";
-        newElement.style.color = "#128ee9";
-        targetDiv.prepend(newElement);
+        var span = document.createElement("span");
+        span.textContent = subCount + " sub" + (subCount==1 ? " " : "s") + " ";
+        span.style.color = "#128ee9";
+        targetDiv.prepend(span);
     });
 }
 
